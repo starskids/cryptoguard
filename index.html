@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoGuard - Stop Losing Money to Crypto Scams</title>
+    <meta name="description" content="Protect your crypto investments. Scan smart contracts for scams before you buy. Used by 1000+ investors.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0F172A;
+            color: #F1F5F9;
+            line-height: 1.6;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #FCA5A5;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #EF4444 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94A3B8;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            padding: 20px 60px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.4);
+        }
+        
+        .trust-signal {
+            font-size: 14px;
+            color: #64748B;
+            margin-top: 20px;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 80px 20px;
+            background: #1E293B;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .problem-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 2px solid rgba(239, 68, 68, 0.2);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .problem-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FCA5A5;
+            margin-bottom: 10px;
+        }
+        
+        .problem-stat {
+            font-size: 32px;
+            font-weight: 900;
+            color: #EF4444;
+            margin-bottom: 10px;
+        }
+        
+        .problem-text {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 20px;
+            background: #0F172A;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #1E293B;
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 4px solid #10B981;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #10B981;
+        }
+        
+        .feature-text {
+            font-size: 15px;
+            color: #CBD5E1;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            padding: 60px 20px;
+            background: #1E293B;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #0F172A;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            color: #CBD5E1;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #10B981;
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #10B981;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #94A3B8;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 20px;
+            background: #0F172A;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: #1E293B;
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid #334155;
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border-color: #10B981;
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+        }
+        
+        .plan-badge {
+            background: #10B981;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 48px;
+            font-weight: 900;
+            color: #10B981;
+            margin-bottom: 5px;
+        }
+        
+        .plan-price small {
+            font-size: 18px;
+            color: #64748B;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #334155;
+            color: #CBD5E1;
+        }
+        
+        .plan-features li:before {
+            content: "✓ ";
+            color: #10B981;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cta-secondary {
+            background: #334155;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .cta-secondary:hover {
+            background: #475569;
+        }
+        
+        /* Urgency */
+        .urgency {
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .urgency-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .countdown {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #1E293B;
+        }
+        
+        .faq-item {
+            background: #0F172A;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            color: #10B981;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #CBD5E1;
+            line-height: 1.8;
+        }
+        
+        /* Footer CTA */
+        .footer-cta {
+            padding: 80px 20px;
+            background: #0F172A;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .hero-subtitle { font-size: 18px; }
+            .section-title { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-badge">⚠️ $2.5 Billion Lost to Crypto Scams in 2024</div>
+        <h1>Don't Be the Next <span class="gradient-text">Victim</span></h1>
+        <p class="hero-subtitle">
+            Scan any smart contract in 3 seconds. Know if it's safe BEFORE you invest.
+        </p>
+        <a href="#download" class="cta-primary" id="hero-cta">
+            Download CryptoGuard Free
+        </a>
+        <div class="trust-signal">
+            ✓ Free Forever · ✓ No Credit Card · ✓ 2 Scans/Day
+        </div>
+    </div>
+    
+    <!-- Problem -->
+    <div class="problem">
+        <div class="container">
+            <h2 class="section-title">The Harsh Reality of Crypto</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <div class="problem-stat">$2.5B</div>
+                    <div class="problem-title">Lost in 2024</div>
+                    <p class="problem-text">Investors lost billions to rugpulls and scams</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏱️</div>
+                    <div class="problem-stat">60 sec</div>
+                    <div class="problem-title">Average Rugpull</div>
+                    <p class="problem-text">Scammers drain liquidity in under a minute</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">😱</div>
+                    <div class="problem-stat">34%</div>
+                    <div class="problem-title">On BSC Chain</div>
+                    <p class="problem-text">Over a third of all scams happen on BNB Chain</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Solution -->
+    <div class="solution">
+        <div class="container">
+            <h2 class="section-title">Protect Yourself in 3 Seconds</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Smart Contract Analysis</div>
+                    <p class="feature-text">AI scans contract code for dangerous functions, rugpull patterns, and hidden traps</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">Instant Risk Score</div>
+                    <p class="feature-text">Get a 0-100 risk score in seconds. Red flags highlighted automatically</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <div class="feature-title">9 Blockchains</div>
+                    <p class="feature-text">Ethereum, BSC, Polygon, Arbitrum, Base, Optimism, Avalanche, Solana, Tron</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Contract Verification</div>
+                    <p class="feature-text">Instantly check if code is verified, age of contract, transaction count</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <div class="feature-title">Rugpull Detection</div>
+                    <p class="feature-text">Identifies owner withdraw functions and liquidity drain risks</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📜</div>
+                    <div class="feature-title">Scan History</div>
+                    <p class="feature-text">Track all your scans. Never invest in the same scam twice</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Proof -->
+    <div class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Join 1,000+ Protected Investors</h2>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Saved me $5,000 on my first day. Was about to ape into a token that CryptoGuard flagged as a rugpull. 
+                    10 minutes later it was drained. This app literally paid for itself 1000x over."
+                </p>
+                <div class="testimonial-author">— Marcus T., DeFi Investor</div>
+            </div>
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Users Protected</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Scans Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$2M+</div>
+                    <div class="stat-label">Losses Prevented</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pricing -->
+    <div class="pricing" id="download">
+        <div class="container">
+            <h2 class="section-title">Choose Your Protection Level</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Free</div>
+                    <div class="plan-price">$0<small>/forever</small></div>
+                    <ul class="plan-features">
+                        <li>2 scans per day</li>
+                        <li>Basic risk scoring</li>
+                        <li>9 blockchains</li>
+                        <li>Scan history</li>
+                        <li>Rugpull detection</li>
+                    </ul>
+                    <a href="#" class="cta-secondary">Download Free</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-badge">MOST POPULAR</div>
+                    <div class="plan-name">Premium</div>
+                    <div class="plan-price">$4.99<small>/month</small></div>
+                    <ul class="plan-features">
+                        <li>Unlimited scans</li>
+                        <li>Advanced deep analysis</li>
+                        <li>Real-time alerts</li>
+                        <li>Priority support</li>
+                        <li>Early access features</li>
+                        <li>Detailed reports</li>
+                    </ul>
+                    <a href="#" class="cta-primary">Start Free Trial</a>
+                </div>
+            </div>
+            <p style="text-align: center; color: #64748B; margin-top: 30px;">
+                💳 Cancel anytime · 🔒 Secure payment · ⚡ Instant activation
+            </p>
+        </div>
+    </div>
+    
+    <!-- Urgency -->
+    <div class="urgency">
+        <div class="urgency-text">🚀 APK Building Now - Download in 30 Minutes!</div>
+        <div class="countdown" id="countdown">00:30:00</div>
+        <a href="#" class="cta-primary" style="background: white; color: #EF4444;">Get Notified When Ready</a>
+    </div>
+    
+    <!-- FAQ -->
+    <div class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">How does CryptoGuard detect scams?</div>
+                <div class="faq-answer">
+                    We analyze smart contract code for dangerous patterns: unlimited transferFrom functions, 
+                    owner withdraw capabilities, unverified code, low transaction counts, and rugpull signatures.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Which blockchains are supported?</div>
+                <div class="faq-answer">
+                    Ethereum, BSC, Polygon, Arbitrum, Base, Optimism, Avalanche, Solana, and Tron. 
+                    More chains coming soon!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is the free version really free forever?</div>
+                <div class="faq-answer">
+                    Yes! 2 scans per day, forever. No credit card required. Upgrade to Premium only if you need unlimited scans.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can this guarantee I won't get scammed?</div>
+                <div class="faq-answer">
+                    While no tool is 100% perfect, CryptoGuard identifies the most common scam patterns that have 
+                    stolen billions. Always do your own research and never invest more than you can afford to lose.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer CTA -->
+    <div class="footer-cta">
+        <h2 style="font-size: 42px; margin-bottom: 20px;">
+            Stop Gambling. Start Scanning.
+        </h2>
+        <p style="font-size: 20px; color: #94A3B8; margin-bottom: 40px;">
+            Download CryptoGuard and never fall for a scam again.
+        </p>
+        <a href="#download" class="cta-primary">Download Free APK</a>
+    </div>
+    
+    <script>
+        // Countdown timer
+        let timeLeft = 30 * 60;
+        const countdownEl = document.getElementById('countdown');
+        
+        setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                const mins = Math.floor(timeLeft / 60);
+                const secs = timeLeft % 60;
+                countdownEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            }
+        }, 1000);
+        
+        // CTA clicks
+        document.querySelectorAll('a[href="#"]').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('🚀 APK building now! Enter your email to get notified when ready:\n\n(Email collection coming soon)');
+            });
+        });
+    </script>
+</body>
+</html>
